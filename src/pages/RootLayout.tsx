@@ -1,5 +1,9 @@
 import { Outlet } from 'react-router';
 
 export const RootLayout = () => {
-  return <Outlet />;
+  return (
+    <div className="flex min-h-screen">
+      <Outlet />
+    </div>
+  );
 };
