@@ -23,11 +23,23 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-empty-object-type': [
         'error',
         {
           allowInterfaces: 'with-single-extends',
+        },
+      ],
+      '@typescript-eslint/no-restricted-imports': [
+        'error',
+        {
+          paths: [
+            {
+              name: 'react-redux',
+              importNames: ['useDispatch', 'useSelector'],
+              message: 'Use `useAppDispatch` and `useAppSelector` instead.',
+            },
+          ],
         },
       ],
     },
