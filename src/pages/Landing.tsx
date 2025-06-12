@@ -1,8 +1,13 @@
+import { Link } from 'react-router';
+
 import { Page } from '@/components';
-import { selectCounterValue, useAppSelector } from '@/store';
+import { Route } from '@/config';
 
 export const Landing = () => {
-  const counterValue = useAppSelector(selectCounterValue);
-
-  return <Page className="bg-green-500">Counter: {counterValue}</Page>;
+  return (
+    <Page className="flex flex-col items-center justify-center">
+      <h1 className="text-2xl font-semibold">React Starter Template</h1>
+      <Link to={Route.ABOUT}>Go to About page</Link>
+    </Page>
+  );
 };

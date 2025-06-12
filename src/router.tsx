@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router';
 
-import { Landing, RootLayout } from './pages';
+import { About, Landing, RootLayout } from '@/pages';
 
 const router = createBrowserRouter([
   {
@@ -9,6 +9,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Landing />,
+      },
+      {
+        path: '/about',
+        element: <About />,
       },
     ],
   },
