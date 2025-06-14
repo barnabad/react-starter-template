@@ -1,1 +1,1 @@
-export const DEFAULT_PAGE_TITLE = 'React Starter Template';
+export const DEFAULT_PAGE_TITLE = 'PAGE_TITLE.DEFAULT';
