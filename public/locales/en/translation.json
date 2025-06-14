@@ -1,0 +1,10 @@
+{
+  "PAGE_TITLE": {
+    "DEFAULT": "React Starter Template",
+    "ABOUT": "About"
+  },
+  "COMMON": {
+    "TITLE": "React Starter Template",
+    "LINK": "Go to About page"
+  }
+}

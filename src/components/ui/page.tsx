@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { DEFAULT_PAGE_TITLE } from '@/config';
 import { cn } from '@/utils';
@@ -13,13 +14,15 @@ export const Page = ({
   pageTitle,
   ...rest
 }: PageProps) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     if (pageTitle) {
-      document.title = pageTitle;
+      document.title = t(pageTitle);
     } else {
-      document.title = DEFAULT_PAGE_TITLE;
+      document.title = t(DEFAULT_PAGE_TITLE);
     }
-  }, [pageTitle]);
+  }, [pageTitle, t]);
 
   return (
     <div className={cn('flex-grow', className)} {...rest}>
