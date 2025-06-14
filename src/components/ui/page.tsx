@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import { DEFAULT_PAGE_TITLE } from '@/config';
-import { cn } from '@/utils/cn';
+import { cn } from '@/utils';
 
 interface PageProps extends React.HTMLAttributes<HTMLDivElement> {
   pageTitle?: string;
