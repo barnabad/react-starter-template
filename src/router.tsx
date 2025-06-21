@@ -9,10 +9,15 @@ import {
   RootLayout,
   Signup,
 } from '@/pages';
+import { Suspense } from 'react';
+
+const withSuspense = (element: React.ReactNode) => (
+  <Suspense fallback={<div>Loading...</div>}>{element}</Suspense>
+);
 
 const router = createBrowserRouter([
   {
-    element: <RootLayout />,
+    element: withSuspense(<RootLayout />),
     children: [
       {
         path: '/',

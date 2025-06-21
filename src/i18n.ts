@@ -10,6 +10,9 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    react: {
+      useSuspense: true,
+    },
     fallbackLng: SUPPORTED_LANGUAGES[0],
     load: 'languageOnly',
     debug: ENVIRONMENT === 'development' ? true : false,
