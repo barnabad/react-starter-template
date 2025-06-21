@@ -9,6 +9,8 @@ import router from '@/router';
 import '@/index.css';
 import '@/i18n';
 
+import '/node_modules/flag-icons/css/flag-icons.min.css';
+
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
