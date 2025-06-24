@@ -55,6 +55,22 @@ export const LanguageSelector = () => {
       isSearchable={false}
       onChange={handleLanguageChange}
       defaultValue={defaultValue}
+      styles={{
+        option: (provided) => ({
+          ...provided,
+          borderRadius: 5,
+        }),
+        menu: (provided) => ({
+          ...provided,
+          paddingInline: 3,
+        }),
+        menuList: (provided) => ({
+          ...provided,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 4,
+        }),
+      }}
     />
   );
 };
