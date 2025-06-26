@@ -46,7 +46,9 @@ export const LanguageSelector = () => {
     if (selected) changeLanguage(selected.value as SupportedLanguages);
   };
 
-  const defaultValue = options.find((item) => item.value === i18n.language);
+  const defaultValue = options.find(({ value }) =>
+    i18n.language.startsWith(value)
+  );
 
   return (
     <Select<LanguageOption>
