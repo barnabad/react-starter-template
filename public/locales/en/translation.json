@@ -1,4 +1,7 @@
 {
+  "APP": {
+    "NAME": "Starter Project"
+  },
   "PAGE_TITLE": {
     "DEFAULT": "React Starter Template",
     "ABOUT": "About"

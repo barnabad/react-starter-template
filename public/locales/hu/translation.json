@@ -1,4 +1,7 @@
 {
+  "APP": {
+    "NAME": "Kezdő project"
+  },
   "PAGE_TITLE": {
     "DEFAULT": "React Kezdő Sablon",
     "ABOUT": "Rólunk"
