@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { createBrowserRouter } from 'react-router';
 
 import {
@@ -10,14 +9,13 @@ import {
   RootLayout,
   Signup,
 } from '@/pages';
-
-const withSuspense = (element: React.ReactNode) => (
-  <Suspense fallback={<div>Loading...</div>}>{element}</Suspense>
-);
+import { RootLoader, WithSuspense } from '@/components';
 
 const router = createBrowserRouter([
   {
-    element: withSuspense(<RootLayout />),
+    element: (
+      <WithSuspense fallback={<RootLoader />} element={<RootLayout />} />
+    ),
     children: [
       {
         path: '/',
