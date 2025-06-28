@@ -9,10 +9,22 @@
   "scripts": {
     "dev": "vite --mode development",
     "build": "tsc -b && vite build --mode production",
-    "lint": "eslint .",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx src/ --fix",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "check-format": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run lint:fix",
+      "npm run format",
+      "git add"
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "npm run format",
+      "git add"
+    ]
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
@@ -46,6 +58,8 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "typescript": "~5.8.3",
