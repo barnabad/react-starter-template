@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { createBrowserRouter } from 'react-router';
 
 import {
@@ -9,7 +10,6 @@ import {
   RootLayout,
   Signup,
 } from '@/pages';
-import { Suspense } from 'react';
 
 const withSuspense = (element: React.ReactNode) => (
   <Suspense fallback={<div>Loading...</div>}>{element}</Suspense>
