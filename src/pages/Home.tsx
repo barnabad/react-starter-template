@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { Page } from '@/components';
 import { Route } from '@/config';
 
-export const Landing = () => {
+export const Home = () => {
   const { t } = useTranslation();
 
   return (

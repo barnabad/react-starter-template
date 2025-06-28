@@ -1,40 +1,35 @@
 import { createBrowserRouter } from 'react-router';
 
+import { About, Home, Login, RootLayout } from '@/pages';
 import {
-  About,
-  Landing,
-  Login,
-  Profile,
-  ProtectedLayout,
-  RootLayout,
-  Signup,
-} from '@/pages';
-import { RootLoader, WithSuspense } from '@/components';
+  ProtectedRoute,
+  RedirectAuthenticated,
+  RootLoader,
+  WithSuspense,
+} from '@/components';
 
 const router = createBrowserRouter([
   {
+    path: '/',
     element: (
       <WithSuspense fallback={<RootLoader />} element={<RootLayout />} />
     ),
     children: [
       {
-        path: '/',
-        element: <Landing />,
-      },
-      {
-        path: '/signup',
-        element: <Signup />,
-      },
-      {
-        path: '/login',
-        element: <Login />,
-      },
-      {
-        element: <ProtectedLayout />,
+        element: <RedirectAuthenticated />,
         children: [
           {
-            path: '/profile',
-            element: <Profile />,
+            path: '/login',
+            element: <Login />,
+          },
+        ],
+      },
+      {
+        element: <ProtectedRoute />,
+        children: [
+          {
+            index: true,
+            element: <Home />,
           },
           {
             path: '/about',
