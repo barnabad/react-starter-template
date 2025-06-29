@@ -7,7 +7,7 @@ import Select, {
 import { useTranslation } from 'react-i18next';
 
 import { FLAG_MAP, type SupportedLanguages } from '@/config';
-import { changeLanguage } from '@/utils/changeLanguage';
+import { changeLanguage } from '@/utils';
 
 type LanguageOption = {
   label: string;

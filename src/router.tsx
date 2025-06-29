@@ -1,12 +1,7 @@
 import { createBrowserRouter } from 'react-router';
 
 import { About, Home, Login, RootLayout } from '@/pages';
-import {
-  ProtectedRoute,
-  RedirectAuthenticated,
-  RootLoader,
-  WithSuspense,
-} from '@/components';
+import { ProtectedRoute, RootLoader, WithSuspense } from '@/components';
 
 const router = createBrowserRouter([
   {
@@ -16,13 +11,8 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        element: <RedirectAuthenticated />,
-        children: [
-          {
-            path: '/login',
-            element: <Login />,
-          },
-        ],
+        path: '/login',
+        element: <Login />,
       },
       {
         element: <ProtectedRoute />,
