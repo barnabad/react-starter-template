@@ -1,5 +1,6 @@
-import { Route } from '@/config';
 import { useNavigate, useSearchParams } from 'react-router';
+
+import { Route } from '@/config';
 
 export const useRedirect = () => {
   const [searchParams] = useSearchParams();
