@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router';
 
-import { About, Home, Login, RootLayout } from '@/pages';
 import { ProtectedRoute, RootLoader, WithSuspense } from '@/components';
+import { About, Home, Login, RootLayout } from '@/pages';
 
 const router = createBrowserRouter([
   {

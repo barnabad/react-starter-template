@@ -1,10 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import Select, {
   components,
   type OptionProps,
   type SingleValue,
   type SingleValueProps,
 } from 'react-select';
-import { useTranslation } from 'react-i18next';
 
 import { FLAG_MAP, type SupportedLanguages } from '@/config';
 import { changeLanguage } from '@/utils';

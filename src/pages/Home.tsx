@@ -1,6 +1,6 @@
-import { Link } from 'react-router';
-import { useTranslation } from 'react-i18next';
 import toast from 'react-hot-toast';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
 
 import { Page } from '@/components';
 import { Route } from '@/config';

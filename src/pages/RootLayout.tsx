@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router';
 import { Toaster } from 'react-hot-toast';
+import { Outlet } from 'react-router';
 
 import { Header } from '@/components';
 import { TOAST_POSITION } from '@/config';
